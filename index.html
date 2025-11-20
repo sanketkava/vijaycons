@@ -81,6 +81,51 @@
     right: 15px;
   }
 }
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* full screen hero */
+  display: flex;
+  align-items: center;
+}
+
+.hero-video-section .hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* dark overlay for text visibility */
+.hero-video-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35); 
+  z-index: 0;
+}
+
+.hero-video-section .xb-hero_content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+/* responsive height for mobile */
+@media (max-width: 700px) {
+  .hero-video-section {
+    height: 70vh;
+  }
+}
 </style>
 
 </head>
@@ -216,17 +261,24 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <section class="hero hero-style-one pos-rel bg_img" data-background="assets/img/bg/hero_bg1.jpg">
-            <div class="container">
-                <div class="xb-hero_content">
-                    <h2 class="xb-title wow skewIn" data-wow-delay="0ms" data-wow-duration="800ms">Empowering Homes with <span>Residential Solar</span></h2>
-                    <div class="hero-btn mt-45 ul_li wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                        <a href="contact.html" class="thm-btn residen-btn residen-btn--white-btn">Get a quote</a>
-                        <a href="about.html" class="thm-btn residen-btn residen-btn--glassy-btn">LEARN More</a>
-                    </div>
-                </div>
+      <section class="hero hero-style-one pos-rel hero-video-section">
+    <video class="hero-video" autoplay loop muted playsinline>
+        <source src="assets/img/hero/1.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="xb-hero_content">
+            <h2 class="xb-title wow skewIn" data-wow-delay="0ms" data-wow-duration="800ms">
+                Empowering Homes with <span>Residential Solar</span>
+            </h2>
+            <div class="hero-btn mt-45 ul_li wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+                <a href="contact.html" class="thm-btn residen-btn residen-btn--white-btn">Get a quote</a>
+                <!-- <a href="about.html" class="thm-btn residen-btn residen-btn--glassy-btn">LEARN More</a> -->
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
         <!-- hero end -->
 
         <!-- wcu start -->
