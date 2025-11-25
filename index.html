@@ -43,11 +43,53 @@
   #xb-header-area .header-logo .logo1 { display: inline-block; }
   #xb-header-area .header-logo .logo2 { display: none; } /* optional: hide sticky-white logo if undesired */
 
+  /* Installation Types Styling */
+  .installation-item {
+    height: 100%;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .installation-img {
+    width: 100%;
+    height: 250px; /* Fixed height for all images */
+    overflow: hidden;
+  }
+  
+  .installation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .installation-item:hover .installation-img img {
+    transform: scale(1.05);
+  }
+  
+  .installation-content {
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .installation-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .installation-content p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
   .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;          /* change to left:20px; if you want left side */
-  width: 56px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;          /* change to left:20px; if you want left side */
+    width: 56px;
   height: 56px;
   border-radius: 50%;
   background: #25D366;
@@ -447,7 +489,7 @@
                     <div class="row align-items-center mt-none-30">
                         <div class="col-lg-5 mt-30">
                             <div class="xb-about-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms">
-                                <img src="assets/img/about/about-img01.jpg" alt="">
+                                <img src="assets/img/about/product-jpeg-500x500.webp" alt="">
                             </div>
                         </div>
                         <div class="col-lg-7 mt-30">
@@ -495,7 +537,7 @@
                         <div class="process-images">
                             <div class="xb-process-image active">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img01.jpg" alt="">
+                                    <img src="assets/img/project/khti.webp" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -599,6 +641,120 @@
         </section>
         <!-- process end -->
 
+        <!-- installation types start -->
+        <section class="installation-types pt-125 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="sec-title">
+                            <h2 class="title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">Our Installation <span>Types</span></h2>
+                            <p class="mt-20">We offer various installation options to suit your specific needs and property requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-60">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="installation-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
+                            <div class="installation-img">
+                                <img src="assets/img/installation/images.jpg" alt="Structure Mounting">
+                            </div>
+                            <div class="installation-content">
+                                <h3>Structure Mounting</h3>
+                                <p>Ideal for flat roofs or ground installations where a sturdy framework is needed to support solar panels at the optimal angle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="installation-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+                            <div class="installation-img">
+                                <img src="assets/img/installation/WhatsApp Image 2025-11-23 at 6.37.14 PM (1).jpeg" alt="Piling Mounting">
+                            </div>
+                            <div class="installation-content">
+                                <h3>Piling Mounting</h3>
+                                <p>Perfect for ground installations, providing a secure foundation by driving piles into the ground to support the solar array.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="installation-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="600ms">
+                            <div class="installation-img">
+                                <img src="assets/img/installation/product-jpeg-500x500.webp" alt="Modular System">
+                            </div>
+                            <div class="installation-content">
+                                <h3>Modular System</h3>
+                                <p>Flexible and scalable solution that can be easily expanded or reconfigured as your energy needs change over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- installation types end -->
+
+        <!-- featured project start -->
+        <section class="featured-project pt-125 pb-130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="sec-title">
+                            <h2 class="title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">Our <span>Featured Project</span></h2>
+                            <p class="mt-20">Explore our latest and most impactful solar energy installation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-60">
+                    <div class="col-lg-12">
+                        <div class="project-single-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="600ms">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="project-image">
+                                        <img src="assets/img/project/sping.jpeg" alt="Residential Solar Installation" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="project-content">
+                                        <h3 class="mb-3">Solar Power System</h3>
+                                        <div class="project-meta mb-4">
+                                            <p class="project-location mb-2">
+                                                <i class="fas fa-map-marker-alt me-2"></i> Bharadva, Gujarat
+                                            </p>
+                                            <div class="project-contact">
+                                                <h5 class="mb-1"><i class="fas fa-user me-2"></i> Kapil Tyagi</h5>
+                                                <p class="mb-0">
+                                                    <i class="fas fa-phone-alt me-2"></i> 
+                                                    <a href="tel:+918130097487" class="text-decoration-none">+91 81300 97487</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                       
+                                            <div class="project-description mt-4">
+                                                <h5 class="mb-3">Project Highlights:</h5>
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> High-efficiency monocrystalline panels</li>
+                                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Sleek, low-profile mounting system</li>
+                                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 100% electricity usage offset</li>
+                                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Aesthetically pleasing design</li>
+                                                </ul>
+                                            </div>
+                                            <div class="project-actions mt-4 pt-3 border-top">
+                                                <a href="project-details.html" class="thm-btn project-btn me-3">
+                                                    <i class="fas fa-images me-2"></i>View Gallery
+                                                </a>
+                                                <a href="tel:+918130097487" class="thm-btn project-btn-outline">
+                                                    <i class="fas fa-phone-alt me-2"></i>Contact Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured project end -->
+
         <!-- service start -->
         <section class="service pt-125 pb-130" data-bg-color="#e6fa00">
             <div class="container">
@@ -634,7 +790,7 @@
                             </div>
                             <div class="acc_body current">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img01.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="assets/img/project/kheti2.jpg" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -652,7 +808,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img02.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="assets/img/project/kheti3.jpg" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -670,7 +826,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img03.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="assets/img/project/kheti3.webp" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -688,7 +844,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img04.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="assets/img/project/kheti4.jpg" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -699,7 +855,7 @@
         <!-- service end -->
 
         <!-- projects end -->
-        <section id="projects" class="project bg-gradient pt-130 pb-120">
+        <!-- <section id="projects" class="project bg-gradient pt-130 pb-120">
             <div class="container">
                 <div class="sec-title text-center mb-55">
                     <h2 class="xb-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">New Initiatives We're <br> <span>Working On</span></h2>
@@ -774,7 +930,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- projects start -->
 
         <!-- faq start -->
