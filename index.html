@@ -190,11 +190,55 @@
 
 /* Logo */
 .header-logo img {
-    height: 52px;
+    height: 70px;
+    width: auto;
     transition: 0.3s ease;
 }
 .header-logo .logo-sticky {
     display: none;
+}
+
+/* Footer Logo */
+.xb-item--logo {
+    margin-bottom: 25px;
+}
+.xb-item--logo img {
+    height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    transition: 0.3s ease;
+}
+
+/* Responsive logo size */
+@media (max-width: 1199px) {
+    .xb-item--logo img {
+        height: 90px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-logo img {
+        height: 60px;
+    }
+    .xb-item--logo img {
+        height: 80px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-logo img {
+        height: 50px;
+    }
+    .xb-item--logo img {
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .xb-item--logo img {
+        height: 60px !important;
+    }
 }
 
 /* Desktop Nav */
@@ -324,7 +368,6 @@
         <!-- DESKTOP NAV -->
         <nav class="header-nav d-none d-lg-flex">
             <a href="index.html" class="nav-link active">Home</a>
-            <a href="project.html" class="nav-link">Projects</a>
             <a href="about.html" class="nav-link">About Us</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
@@ -352,7 +395,6 @@
 
     <nav class="mobile-nav">
         <a href="index.html">Home</a>
-        <a href="project.html">Projects</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
 
@@ -713,7 +755,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="project-content">
-                                        <h3 class="mb-3">Solar Power System</h3>
+                                        <h3 class="mb-3">Land Power System</h3>
                                         <div class="project-meta mb-4">
                                             <p class="project-location mb-2">
                                                 <i class="fas fa-map-marker-alt me-2"></i> Bharadva, Gujarat
@@ -1015,7 +1057,7 @@
         <!-- faq end -->
 
         <!-- contact start -->
-        <section class="contact pt-130 pb-130 bg_img" data-background="assets/img/bg/contact-bg.jpg">
+        <section class="contact pt-130 pb-130 bg_img" data-background="assets/img/bg/inner-home_bg.jpg">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <h2 class="xb-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">Need a quotation? Please submit <br> an <span>enquiry below</span></h2>
@@ -1077,7 +1119,11 @@
                 <div class="row mt-none-50">
                     <div class="col-lg-4 mt-50">
                         <div class="xb-newsletter">
-                            <div class="xb-item--logo"><a href="index.html"><img src="assets/img/logo/footer-logo.svg" alt=""></a></div>
+                            <div class="xb-item--logo" style="margin-bottom: 25px;">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/footer-logo.svg" alt="Vijay Constructions & Solar" style="height: 100px; width: auto; max-width: 100%;">
+                                </a>
+                            </div>
                             <p class="xb-item--content">Vijay Constructions Co & Solar is a leading Indian company specializing in solar plant development and infrastructure construction.
 </p>
                             <div class="xb-item--img wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">
@@ -1112,11 +1158,39 @@
                                 <h3 class="xb-widget-title">Get in touch</h3>
                                 <div class="xb-item--holder">
                                     <p class="xb-item--content">For more information please get in touch below or via our form</p>
-                                    <h3 class="xb-item--contact">
-                                        <span class="xb-item--icon"><img src="assets/img/icon/call-white-icon.svg" alt=""></span>
-                                        <a href="tel:+9199044091448">+9199044091448</a> 
-                                    </h3>
-                                    <p class="xb-item--address">Gujarat , India     </p>
+                                    <div class="contact-item" style="margin-bottom: 15px;">
+                                        <div class="d-flex align-items-center">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px;">
+                                                <img src="assets/img/icon/call-white-icon.svg" alt="">
+                                            </span>
+                                            <div>
+                                                <a href="tel:+9199044091448" style="white-space: nowrap;">+91 99044 09144</a>
+                                                <div style="font-size: 14px; margin-top: 3px;">Dhansukh Godhani</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item" style="margin-bottom: 15px;">
+                                        <div class="d-flex align-items-center">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px;">
+                                                <img src="assets/img/icon/call-white-icon.svg" alt="">
+                                            </span>
+                                            <div>
+                                                <a href="tel:+9199044091448" style="white-space: nowrap;">+91 99044 09144</a>
+                                                <div style="font-size: 14px; margin-top: 3px;">Nagjibhai</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="d-flex">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px; margin-top: 3px;">
+                                                <img src="assets/img/icon/location-white-icon.svg" alt="">
+                                            </span>
+                                            <div class="xb-item--address">
+                                                Bhardava Road, Patel Vas, Vav,<br>
+                                                Banaskantha, Gujarat - 385570
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="xb-footer-right-bottom ul_li align-items-end">
@@ -1124,6 +1198,16 @@
                                     <div class="xb-item--holder">
                                         <h3 class="xb-widget-title">our office open time</h3>
                                         <span class="xb-item--day">Mon - Sat : 8.00-5.00 <br> Sunday : Closed</span>
+                                        <div class="xb-item--email" style="margin-top: 15px;">
+                                            <div>
+                                                <a href="mailto:godhanigodhanidax@gmail.com" 
+                                                   style="color: #000000; font-size: 15px; font-weight: 500; text-decoration: none; line-height: 1.4; word-break: break-word; display: block;"
+                                                   onmouseover="this.style.textDecoration='underline'" 
+                                                   onmouseout="this.style.textDecoration='none'">
+                                                    godhanigodhanidax@gmail.com
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- <div class="xb-social_media">
