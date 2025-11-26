@@ -23,6 +23,309 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    
+
+     <style>
+  /* header: white background + subtle shadow */
+  #xb-header-area.header-area.header-transparent {
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  /* ensure nav text / phone / mobile icon are dark on white */
+  #xb-header-area .main-menu__wrap .main-menu a span,
+  #xb-header-area .header-contact a,
+  #xb-header-area .xb-nav-mobile i,
+  #xb-header-area .xb-header-mobile-search .search-field {
+    color: #0d0d0d !important;
+  }
+
+  /* if your theme swaps logos for sticky, show the primary logo on white header */
+  #xb-header-area .header-logo .logo1 { display: inline-block; }
+  #xb-header-area .header-logo .logo2 { display: none; } /* optional: hide sticky-white logo if undesired */
+
+  /* Installation Types Styling */
+  .installation-item {
+    height: 100%;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .installation-img {
+    width: 100%;
+    height: 250px; /* Fixed height for all images */
+    overflow: hidden;
+  }
+  
+  .installation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .installation-item:hover .installation-img img {
+    transform: scale(1.05);
+  }
+  
+  .installation-content {
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .installation-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .installation-content p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;          /* change to left:20px; if you want left side */
+    width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+/* icon size */
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* smaller on mobile */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* full screen hero */
+  display: flex;
+  align-items: center;
+}
+
+.hero-video-section .hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* dark overlay for text visibility */
+.hero-video-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35); 
+  z-index: 0;
+}
+
+.hero-video-section .xb-hero_content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+/* responsive height for mobile */
+@media (max-width: 700px) {
+  .hero-video-section {
+    height: 70vh;
+  }
+}
+
+/* Modern Header */
+.modern-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 999;
+    box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+}
+
+/* Logo */
+.header-logo img {
+    height: 70px;
+    width: auto;
+    transition: 0.3s ease;
+}
+.header-logo .logo-sticky {
+    display: none;
+}
+
+/* Footer Logo */
+.xb-item--logo {
+    margin-bottom: 25px;
+}
+.xb-item--logo img {
+    height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    transition: 0.3s ease;
+}
+
+/* Responsive logo size */
+@media (max-width: 1199px) {
+    .xb-item--logo img {
+        height: 90px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-logo img {
+        height: 60px;
+    }
+    .xb-item--logo img {
+        height: 80px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-logo img {
+        height: 50px;
+    }
+    .xb-item--logo img {
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .xb-item--logo img {
+        height: 60px !important;
+    }
+}
+
+/* Desktop Nav */
+.header-nav .nav-link {
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d0d0d;
+    transition: 0.3s;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link.active {
+    color: #2ecc71; /* green theme */
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    background: #0c2b48;
+    color: #fff;
+    padding: 10px 22px;
+    font-size: 15px;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #123a60;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #0d0d0d;
+}
+
+/* Mobile Menu Panel */
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+    transition: right 0.35s ease;
+    padding: 25px;
+    z-index: 9999;
+}
+
+.mobile-menu-wrapper.open {
+    right: 0;
+}
+
+.mobile-close-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 25px;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-call-btn {
+    margin-top: 18px;
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #0c2b48;
+    font-weight: bold;
+}
+
+</style>
 </head>
 
 <body class="inner-page-style">
@@ -53,93 +356,54 @@
 <div class="body_wrap o-clip">
 
     <!-- header start -->
-    <header id="xb-header-area" class="header-area header-style-one header-transparent">
-        <div class="xb-header stricky">
-            <div class="container-fluid p-0">
-                <div class="header__wrap ul_li_between">
-                    <div class="header-logo">
-                        <a href="index.html" class="logo1"><img src="assets/img/logo/logo.svg" alt=""></a>
-                        <a href="index.html" class="logo2"><img src="assets/img/logo/logo-sticky.svg" alt=""></a>
-                    </div>
-                    <div class="main-menu__wrap  navbar navbar-expand-lg">
-                        <nav class="main-menu collapse navbar-collapse">
-                            <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="index.html"><span>Home</span></a>
-                                    
-                                </li>
-                                <!-- <li class="menu-item-has-children active">
-                                    <a href="#!"><span>Pages</span></a>
-                                    <ul class="submenu">
-                                        <li class="active"><a href="about.html"><span>about us</span></a></li>
-                                        <li><a href="service-details.html"><span>service details</span></a></li>
-                                        <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                        <li><a href="privacy.html"><span>privacy policy</span></a></li>
-                                    </ul>   
-                                </li>  -->
-                                <li class="menu-item-has-children">
-                                    <a href="project.html"><span>Projects</span></a>
-                                    <!-- <ul class="submenu">
-                                        <li><a href="project.html"><span>Projects</span></a></li>
-                                        <li><a href="project-details.html"><span>Project details</span></a></li>
-                                    </ul> -->
-                                </li>
-                              
-                                <li><a href="contact.html"><span>Contact</span></a></li>
-                                 <li><a href="about.html"><span>About Us</span></a></li>
-                            </ul>
-                        </nav>
-                        <div class="xb-header-wrap">
-                            <div class="xb-header-menu">
-                                <div class="xb-header-menu-scroll">
-                                    <div class="xb-menu-close xb-hide-xl xb-close"></div>
-                                    <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="assets/img/logo/logo-sticky.svg" alt=""></a></div>
-                                    <div class="xb-header-mobile-search xb-hide-xl">
-                                        <form role="search" action="#">
-                                            <input type="text" placeholder="Search..." name="s" class="search-field">
-                                            <button class="search-submit" type="submit"><i class="far fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                    <nav class="xb-header-nav">
-                                        <ul class="xb-menu-primary clearfix">
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#"><span>Home</span></a>
-                                             
-                                            </li>
-                                            
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="project.html"><span>Projects</span></a>
-                                                
-                                            </li>
-                                          
-                                            <li><a href="contact.html"><span>Contact</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="xb-header-menu-backdrop"></div>
-                        </div>
-                    </div>
-                    <div class="header-contact d-none d-xl-block">
-                        <a href="tel:+919904091448" class="thm-btn residen-btn inner-contact-btn">
-                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M30.2087 25.2037C30.2087 25.6987 30.0987 26.2075 29.865 26.7025C29.6312 27.1975 29.3287 27.665 28.93 28.105C28.2562 28.8475 27.5137 29.3838 26.675 29.7275C25.85 30.0713 24.9562 30.25 23.9937 30.25C22.5912 30.25 21.0925 29.92 19.5112 29.2463C17.93 28.5725 16.3487 27.665 14.7812 26.5238C13.2 25.3688 11.7012 24.09 10.2712 22.6737C8.855 21.2437 7.57625 19.745 6.435 18.1775C5.3075 16.61 4.4 15.0425 3.74 13.4888C3.08 11.9213 2.75 10.4225 2.75 8.9925C2.75 8.0575 2.915 7.16375 3.245 6.33875C3.575 5.5 4.0975 4.73 4.82625 4.0425C5.70625 3.17625 6.66875 2.75 7.68625 2.75C8.07125 2.75 8.45625 2.8325 8.8 2.9975C9.1575 3.1625 9.47375 3.41 9.72125 3.7675L12.9112 8.26375C13.1587 8.6075 13.3375 8.92375 13.4612 9.22625C13.585 9.515 13.6537 9.80375 13.6537 10.065C13.6537 10.395 13.5575 10.725 13.365 11.0412C13.1862 11.3575 12.925 11.6875 12.595 12.0175L11.55 13.1037C11.3987 13.255 11.33 13.4338 11.33 13.6538C11.33 13.7638 11.3437 13.86 11.3712 13.97C11.4125 14.08 11.4537 14.1625 11.4812 14.245C11.7287 14.6987 12.155 15.29 12.76 16.005C13.3787 16.72 14.0387 17.4488 14.7537 18.1775C15.4962 18.9063 16.2112 19.58 16.94 20.1987C17.655 20.8037 18.2462 21.2162 18.7137 21.4637C18.7825 21.4912 18.865 21.5325 18.9612 21.5737C19.0712 21.615 19.1812 21.6287 19.305 21.6287C19.5387 21.6287 19.7175 21.5463 19.8687 21.395L20.9137 20.3638C21.2575 20.02 21.5875 19.7587 21.9037 19.5938C22.22 19.4012 22.5362 19.305 22.88 19.305C23.1412 19.305 23.4162 19.36 23.7187 19.4838C24.0212 19.6075 24.3375 19.7863 24.6812 20.02L29.2325 23.2512C29.59 23.4987 29.8375 23.7875 29.9887 24.1312C30.1262 24.475 30.2087 24.8187 30.2087 25.2037Z" stroke="#00322F" stroke-width="1.5" stroke-miterlimit="10" />
-                                <path d="M25.4375 12.375C25.4375 11.55 24.7912 10.285 23.8287 9.25375C22.9487 8.305 21.78 7.5625 20.625 7.5625" stroke="#00322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M30.25 12.375C30.25 7.05375 25.9462 2.75 20.625 2.75" stroke="#00322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          +919904091448
-                        </a>
-                    </div>
-                    <div class="header-bar-mobile side-menu d-lg-none">
-                        <a class="xb-nav-mobile" href="javascript:void(0);">
-                            <i class="far fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <header id="xb-header-area" class="modern-header">
+    <div class="header-inner container-fluid">
+        
+        <!-- LOGO -->
+        <a href="index.html" class="header-logo">
+            <img src="assets/img/logo/logo.svg" alt="Logo" class="logo-main">
+            <img src="assets/img/logo/logo-sticky.svg" alt="Logo" class="logo-sticky">
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="header-nav d-none d-lg-flex">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- CALL BUTTON (DESKTOP) -->
+        <div class="header-cta d-none d-xl-block">
+            <a href="tel:+919904091448" class="cta-btn">
+                <img src="assets/img/icon/call-white.svg" alt="">
+                +91 99040 91448
+            </a>
         </div>
-    </header>
+
+        <!-- MOBILE MENU ICON -->
+       <button class="mobile-menu-btn d-lg-none" id="menuToggle">
+    <i class="far fa-bars"></i>
+</button>
+
+    </div>
+
+    <!-- MOBILE MENU PANEL -->
+   <div class="mobile-menu-wrapper" id="mobileMenuPanel">
+    <button class="mobile-close-btn" id="menuClose">
+        <i class="far fa-times"></i>
+    </button>
+
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="tel:+919904091448" class="mobile-call-btn">
+            <i class="far fa-phone"></i> +91 99040 91448
+        </a>
+    </nav>
+</div>
+</header>
     <!-- header end -->
   
     <!-- main area start -->
@@ -465,13 +729,17 @@
     <!-- main area end -->
 
    <!-- footer strt -->
-    <footer class="footer footer-style-one pos-rel">
+ <footer class="footer footer-style-one pos-rel">
         <div class="container">
             <div class="xb-footer-wrap pt-130">
                 <div class="row mt-none-50">
                     <div class="col-lg-4 mt-50">
                         <div class="xb-newsletter">
-                            <div class="xb-item--logo"><a href="index.html"><img src="assets/img/logo/footer-logo.svg" alt=""></a></div>
+                            <div class="xb-item--logo" style="margin-bottom: 25px;">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/footer-logo.svg" alt="Vijay Constructions & Solar" style="height: 100px; width: auto; max-width: 100%;">
+                                </a>
+                            </div>
                             <p class="xb-item--content">Vijay Constructions Co & Solar is a leading Indian company specializing in solar plant development and infrastructure construction.
 </p>
                             <div class="xb-item--img wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">
@@ -506,11 +774,39 @@
                                 <h3 class="xb-widget-title">Get in touch</h3>
                                 <div class="xb-item--holder">
                                     <p class="xb-item--content">For more information please get in touch below or via our form</p>
-                                    <h3 class="xb-item--contact">
-                                        <span class="xb-item--icon"><img src="assets/img/icon/call-white-icon.svg" alt=""></span>
-                                        <a href="tel:+9199044091448">+9199044091448</a> 
-                                    </h3>
-                                    <p class="xb-item--address">Gujarat , India     </p>
+                                    <div class="contact-item" style="margin-bottom: 15px;">
+                                        <div class="d-flex align-items-center">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px;">
+                                                <img src="assets/img/icon/call-white-icon.svg" alt="">
+                                            </span>
+                                            <div>
+                                                <a href="tel:+9199044091448" style="white-space: nowrap;">+91 99044 09144</a>
+                                                <div style="font-size: 14px; margin-top: 3px;">Dhansukh Godhani</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item" style="margin-bottom: 15px;">
+                                        <div class="d-flex align-items-center">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px;">
+                                                <img src="assets/img/icon/call-white-icon.svg" alt="">
+                                            </span>
+                                            <div>
+                                                <a href="tel:+9199044091448" style="white-space: nowrap;">+91 99044 09144</a>
+                                                <div style="font-size: 14px; margin-top: 3px;">Nagjibhai</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="d-flex">
+                                            <span class="xb-item--icon" style="min-width: 24px; margin-right: 10px; margin-top: 3px;">
+                                                <img src="assets/img/icon/location-white-icon.svg" alt="">
+                                            </span>
+                                            <div class="xb-item--address">
+                                                Bhardava Road, Patel Vas, Vav,<br>
+                                                Banaskantha, Gujarat - 385570
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="xb-footer-right-bottom ul_li align-items-end">
@@ -518,6 +814,16 @@
                                     <div class="xb-item--holder">
                                         <h3 class="xb-widget-title">our office open time</h3>
                                         <span class="xb-item--day">Mon - Sat : 8.00-5.00 <br> Sunday : Closed</span>
+                                        <div class="xb-item--email" style="margin-top: 15px;">
+                                            <div>
+                                                <a href="mailto:godhanigodhanidax@gmail.com" 
+                                                   style="color: #000000; font-size: 15px; font-weight: 500; text-decoration: none; line-height: 1.4; word-break: break-word; display: block;"
+                                                   onmouseover="this.style.textDecoration='underline'" 
+                                                   onmouseout="this.style.textDecoration='none'">
+                                                    godhanigodhanidax@gmail.com
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- <div class="xb-social_media">
